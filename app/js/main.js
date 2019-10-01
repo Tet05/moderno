@@ -25,7 +25,16 @@ $( function () {
 		prefix: "$"
 	} );
 
-	// .$( '.icon-th-list' ).
+	$( '.icon-th-list' ).on( 'click', function () {
+		$( '.product__item' ).addClass( 'list1' );
+		$( '.icon-th-list' ).addClass( 'active' );
+		$( '.icon-th-large' ).removeClass( 'active' );
+	} );
+	$( '.icon-th-large' ).on( 'click', function () {
+		$( '.product__item' ).removeClass( 'list1' );
+		$( '.icon-th-large' ).addClass( 'active' );
+		$( '.icon-th-list' ).removeClass( 'active' );
+	} );
 
 	var mixer = mixitup( '.products__inner-box' );
 } );
